@@ -1,0 +1,30 @@
+{
+  "unlocked": {
+    "first_assessment": {
+      "unlocked_at": "2026-06-25T14:05:09.937788",
+      "name": "初出茅庐",
+      "rarity": "common"
+    },
+    "first_sandbox": {
+      "unlocked_at": "2026-06-25T19:21:24.885455",
+      "name": "初次运行",
+      "rarity": "common"
+    }
+  },
+  "stats": {
+    "total_chats": 0,
+    "total_exercises": 0,
+    "total_correct": 0,
+    "total_sandbox_runs": 1,
+    "assessment_high_score": 40,
+    "interview_high_score": 0,
+    "interview_types_done": [],
+    "last_active_date": "2026-06-26",
+    "streak_days": 2,
+    "by_language": {
+      "python": {
+        "assessment_high_score": 40
+      }
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "python": {
+    "py_q1": {
+      "question": "测试题",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E),"
+      ],
+      "answer": 2,
+      "topic": "数据类型",
+      "difficulty": "easy",
+      "explanation": "测试解析",
+      "error_count": 2,
+      "first_error_time": "2026-06-24 20:13:19",
+      "last_error_time": "2026-06-24 20:13:19"
+    },
+    "py_q32": {
+      "question": "以下代码输出什么?\ntry:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print('A')\nfinally:\n    print('B')",
+      "options": [
+        "A) A",
+        "B) B",
+        "C) A 换行 B",
+        "D) 不输出",
+        "E) 我不清楚"
+      ],
+      "answer": 2,
+      "topic": "异常处理",
+      "difficulty": "easy",
+      "explanation": "except 捕获 ZeroDivisionError 打印 'A',finally 块无论是否发生异常都会执行,打印 'B'。",
+      "error_count": 2,
+      "first_error_time": "2026-06-24 20:40:56",
+      "last_error_time": "2026-06-25 14:05:09"
+    },
+    "py_q26": {
+      "question": "以下代码输出什么?\nd = {'x': 1, 'y': 2, 'z': 3}\nresult = [(k, v) for k, v in d.items() if v > 1]\nprint(result)",
+      "options": [
+        "A) {'y': 2, 'z': 3}",
+        "B) [('y', 2), ('z', 3)]",
+        "C) ('y', 2), ('z', 3)",
+        "D) [('y', 2), ('z', 3), ('x', 1)]",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "字典操作",
+      "difficulty": "medium",
+      "explanation": "字典推导式结合条件过滤,取出 v > 1 的键值对组成元组列表。",
+      "error_count": 1,
+      "first_error_time": "2026-06-24 20:40:56",
+      "last_error_time": "2026-06-24 20:40:56"
+    },
+    "py_q9": {
+      "question": "Python 中 GIL(全局解释器锁)的影响是什么?",
+      "options": [
+        "A) 禁止使用多线程",
+        "B) CPU 密集型任务多线程无法利用多核",
+        "C) 影响异步 I/O 性能",
+        "D) 所有 Python 代码只能串行执行",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "GIL/并发",
+      "difficulty": "hard",
+      "explanation": "GIL 确保同一时刻只有一个线程执行 Python 字节码,CPU 密集型任务用多线程无法加速。I/O 密集型不受明显影响。",
+      "error_count": 1,
+      "first_error_time": "2026-06-24 20:40:56",
+      "last_error_time": "2026-06-24 20:40:56"
+    },
+    "py_q5": {
+      "question": "Python 中 @staticmethod 和 @classmethod 的区别是?",
+      "options": [
+        "A) 没有区别",
+        "B) staticmethod 不接收类引用,classmethod 接收 cls 参数",
+        "C) staticmethod 更快",
+        "D) classmethod 不能被子类继承",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "装饰器",
+      "difficulty": "medium",
+      "explanation": "@staticmethod 不自动传递任何隐式参数;@classmethod 自动传递类本身作为第一个参数 cls。",
+      "error_count": 1,
+      "first_error_time": "2026-06-24 20:40:56",
+      "last_error_time": "2026-06-24 20:40:56"
+    },
+    "py_q36": {
+      "question": "以下哪个模式可以以二进制方式写入文件?",
+      "options": [
+        "A) 'w'",
+        "B) 'wb'",
+        "C) 'w+'",
+        "D) 'bw'",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "文件IO",
+      "difficulty": "easy",
+      "explanation": "'wb' 表示二进制写模式(write binary),适合写入图片、音频等非文本数据。'w' 是文本模式。'w+' 是可读写模式。",
+      "error_count": 2,
+      "first_error_time": "2026-06-24 21:15:00",
+      "last_error_time": "2026-06-25 14:05:09"
+    },
+    "py_q30": {
+      "question": "以下关于 super() 的描述哪个是正确的?",
+      "options": [
+        "A) super() 只能调用直接父类的方法",
+        "B) super() 按 MRO(方法解析顺序)查找下一个类的方法",
+        "C) super() 等价于 self.__parent__",
+        "D) super() 只能在 __init__ 中使用",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "面向对象",
+      "difficulty": "hard",
+      "explanation": "super() 按照 MRO(Method Resolution Order)线性顺序查找下一个类,在多重继承中保证每个父类方法只调用一次。",
+      "error_count": 1,
+      "first_error_time": "2026-06-24 21:15:00",
+      "last_error_time": "2026-06-24 21:15:00"
+    },
+    "py_q42": {
+      "question": "Python 中 threading 和 asyncio 的主要适用场景分别是什么?",
+      "options": [
+        "A) threading 适合 I/O 密集、asyncio 适合 CPU 密集",
+        "B) asyncio 适合 I/O 密集、threading 适合 CPU 密集",
+        "C) 两者都适合 I/O 密集,asyncio 单线程无锁开销",
+        "D) 两者完全相同",
+        "E) 我不清楚"
+      ],
+      "answer": 2,
+      "topic": "GIL/并发",
+      "difficulty": "easy",
+      "explanation": "GIL 下 threading 的 CPU 密集任务无法利用多核。asyncio 单线程协程切换,适合高并发 I/O,无锁竞争。",
+      "error_count": 1,
+      "first_error_time": "2026-06-24 21:15:00",
+      "last_error_time": "2026-06-24 21:15:00"
+    },
+    "py_q24": {
+      "question": "以下代码输出什么?\nd = {'a': 1, 'b': 2}\nprint(d.get('c', 0))",
+      "options": [
+        "A) None",
+        "B) 0",
+        "C) KeyError",
+        "D) 'c'",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "字典操作",
+      "difficulty": "easy",
+      "explanation": "dict.get(key, default) 在 key 不存在时返回 default 值而不抛出异常,所以返回 0。",
+      "error_count": 1,
+      "first_error_time": "2026-06-24 21:15:00",
+      "last_error_time": "2026-06-24 21:15:00"
+    },
+    "py_q44": {
+      "question": "以下哪个是 Python 标准库中用于处理 JSON 的模块?",
+      "options": [
+        "A) yaml",
+        "B) json",
+        "C) xml",
+        "D) pickle",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "常用库",
+      "difficulty": "easy",
+      "explanation": "json 是 Python 标准库中用于编码和解码 JSON 数据的模块,提供 json.dumps() 和 json.loads() 等方法。",
+      "error_count": 1,
+      "first_error_time": "2026-06-24 21:15:00",
+      "last_error_time": "2026-06-24 21:15:00"
+    },
+    "py_q15": {
+      "question": "以下代码输出什么？\nfor i in range(3):\n    pass\nprint(i)",
+      "options": [
+        "A) 0",
+        "B) 2",
+        "C) 3",
+        "D) NameError",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "控制流",
+      "difficulty": "easy",
+      "explanation": "Python 的 for 循环变量在循环结束后仍然存在于作用域中，值为最后一次迭代的值 2。",
+      "error_count": 2,
+      "first_error_time": "2026-06-25 14:05:09",
+      "last_error_time": "2026-06-26 02:14:12"
+    },
+    "py_q41": {
+      "question": "yield from 的作用是什么？",
+      "options": [
+        "A) 与 yield 完全相同",
+        "B) 将迭代委托给另一个生成器/可迭代对象",
+        "C) 终止生成器",
+        "D) 并发执行多个生成器",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "生成器",
+      "difficulty": "hard",
+      "explanation": "yield from iterable 把迭代委托给子生成器，自动处理 send/throw/close，是生成器间的双向通道。",
+      "error_count": 1,
+      "first_error_time": "2026-06-25 14:05:09",
+      "last_error_time": "2026-06-25 14:05:09"
+    },
+    "py_q37": {
+      "question": "以下哪个是装饰器的本质？",
+      "options": [
+        "A) 一种特殊语法，只有 @ 符号",
+        "B) 一个接收函数并返回新函数的高阶函数",
+        "C) 一种类定义方式",
+        "D) 一种模块导入方式",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "装饰器",
+      "difficulty": "easy",
+      "explanation": "装饰器本质上是一个高阶函数：接收一个函数作为参数，返回一个新函数（通常包装了原函数的功能）。",
+      "error_count": 1,
+      "first_error_time": "2026-06-25 14:05:09",
+      "last_error_time": "2026-06-25 14:05:09"
+    },
+    "py_q4": {
+      "question": "以下代码的输出是什么？\ndef f(a, lst=[]):\n    lst.append(a)\n    return lst\nprint(f(1))\nprint(f(2))",
+      "options": [
+        "A) [1] 和 [2]",
+        "B) [1] 和 [1, 2]",
+        "C) 报错",
+        "D) [1, 2] 和 [1, 2]",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "函数",
+      "difficulty": "medium",
+      "explanation": "Python 的默认参数只在函数定义时求值一次，所以 lst 在多次调用间共享。第一次返回 [1]，第二次返回 [1, 2]。",
+      "error_count": 1,
+      "first_error_time": "2026-06-25 14:05:09",
+      "last_error_time": "2026-06-25 14:05:09"
+    },
+    "py_q47": {
+      "question": "以下代码输出什么？\nmatrix = [[1,2,3], [4,5,6]]\nflat = [x for row in matrix for x in row if x % 2 == 0]\nprint(flat)",
+      "options": [
+        "A) [1, 3, 5]",
+        "B) [2, 4, 6]",
+        "C) [1, 2, 3, 4, 5, 6]",
+        "D) []",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "列表操作",
+      "difficulty": "medium",
+      "explanation": "嵌套列表推导式先遍历 matrix 的每一行，再遍历每行的每个元素，过滤出偶数：2、4、6。",
+      "error_count": 1,
+      "first_error_time": "2026-06-25 14:05:09",
+      "last_error_time": "2026-06-25 14:05:09"
+    },
+    "py_q46": {
+      "question": "itertools.chain 的作用是什么？",
+      "options": [
+        "A) 将一个可迭代对象拆分为多个",
+        "B) 将多个可迭代对象串联为一个迭代器",
+        "C) 对可迭代对象排序",
+        "D) 过滤可迭代对象",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "常用库",
+      "difficulty": "hard",
+      "explanation": "itertools.chain(*iterables) 将多个可迭代对象串联，依次产出每个可迭代对象的元素，常用于合并遍历多个序列。",
+      "error_count": 1,
+      "first_error_time": "2026-06-25 14:05:09",
+      "last_error_time": "2026-06-25 14:05:09"
+    },
+    "py_q25": {
+      "question": "以下代码输出什么？\nd1 = {'a': 1}\nd2 = {'b': 2}\nprint({**d1, **d2})",
+      "options": [
+        "A) {'a': 1, 'b': 2}",
+        "B) [('a', 1), ('b', 2)]",
+        "C) 报错",
+        "D) {'a': 1}",
+        "E) 我不清楚"
+      ],
+      "answer": 0,
+      "topic": "字典操作",
+      "difficulty": "easy",
+      "explanation": "** 解包运算符可以合并字典，{**d1, **d2} 等价于 {'a': 1, 'b': 2}。如有重复 key，后面的覆盖前面。",
+      "error_count": 1,
+      "first_error_time": "2026-06-26 02:14:12",
+      "last_error_time": "2026-06-26 02:14:12"
+    },
+    "py_assess_q8": {
+      "question": "以下代码输出什么？\nprint(set([1, 2, 2, 3, 3, 3]))",
+      "options": [
+        "A) [1, 2, 3]",
+        "B) {1, 2, 3}",
+        "C) [1, 2, 2, 3, 3, 3]",
+        "D) 报错",
+        "E) 我不清楚"
+      ],
+      "answer": 1,
+      "topic": "数据类型",
+      "difficulty": "easy",
+      "explanation": "set() 自动去重，返回 {1, 2, 3}。花括号表示 set 类型。",
+      "error_count": 1,
+      "first_error_time": "2026-06-26 02:14:12",
+      "last_error_time": "2026-06-26 02:14:12"
+    }
+  }
+}
